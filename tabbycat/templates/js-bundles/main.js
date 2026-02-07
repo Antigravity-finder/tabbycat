@@ -62,9 +62,9 @@ $.fn.extend({
       }, timeout)
     }
   },
-  loadButton: function () {
+  loadButton: function (button) {
     // Can't use disable attr as some submission button need to pass their value
-    $('button').prop('disabled', true)
+    $(button).prop('disabled', true)
   },
   resetButton: function () {
     $('button').prop('disabled', false)
@@ -75,13 +75,13 @@ $.fn.extend({
 // TCI: Mount global jquery stuff here
 // -----------------------------------------------------------------------------
 
-function disabledTriggeredForm (triggeredForm) {
+function disabledTriggeredForm(triggeredForm) {
   var triggeredButton = $('[type=submit]:focus')[0] // CLicked button
   var submitValue = $(triggeredButton).attr('value')
   var submitName = $(triggeredButton).attr('name')
 
   if ($(triggeredButton).prop('disabled') === undefined ||
-      $(triggeredButton).prop('disabled') === false) {
+    $(triggeredButton).prop('disabled') === false) {
     // Add new dummy field with the button's values
     // (so they pass through despite disabled state)
     if (submitValue !== undefined || submitName !== undefined) {
@@ -91,7 +91,7 @@ function disabledTriggeredForm (triggeredForm) {
         .attr('value', submitValue)
         .appendTo(triggeredForm)
     }
-    $.fn.loadButton(triggeredButton, triggeredForm)
+    $.fn.loadButton(triggeredButton)
   }
 }
 
@@ -112,11 +112,6 @@ $(document).ready(() => {
   // Auto disable submit buttons for forms upon submission (prevent double-sub)
   $('form').submit(function () {
     disabledTriggeredForm(this)
-  })
-
-  // Auto disable submit buttons for buttons that POST
-  $('.submit-disable').click((event) => {
-    $.fn.loadButton(event.target)
   })
 
   // Focus '/' on table search
