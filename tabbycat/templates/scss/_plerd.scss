@@ -1,0 +1,291 @@
+// PLERD Custom Styles
+$plerd-blue: #0099ff;
+$plerd-green: #28a745;
+$plerd-purple: #6f42c1;
+$plerd-gray-bg: #f8f9fa;
+$plerd-card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+.plerd-hero {
+    background-color: $plerd-gray-bg;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #eee;
+
+    .hero-content {
+        max-width: 60%;
+
+        h1 {
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 1rem;
+        }
+
+        p.subtitle {
+            color: #6c757d;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p.info {
+            color: #666;
+        }
+    }
+
+    .hero-image {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.plerd-section-title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.plerd-tournament-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 1.5rem;
+}
+
+.plerd-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: $plerd-card-shadow;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        background: none;
+        border: none;
+        padding: 0;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .titles {
+            h3 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 0.25rem;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-size: 0.85rem;
+                color: #6c757d;
+                margin: 0;
+            }
+        }
+
+        .badge-status {
+            background-color: $plerd-green;
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+    }
+
+    .card-actions {
+        margin-top: 1rem;
+
+        .btn-plerd {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            color: #333;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            transition: background 0.2s;
+
+            &:hover {
+                background: $plerd-gray-bg;
+            }
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
+
+.plerd-navbar {
+    background-color: #fff !important;
+    border-bottom: 1px solid #eee;
+    padding: 0.75rem 2rem !important;
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 700;
+        color: #000 !important;
+
+        .logos {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            img.crest {
+                height: 40px;
+            }
+
+            img.wheel {
+                height: 40px;
+            }
+        }
+
+        .brand-text {
+            font-size: 1.25rem;
+            margin-left: 0.5rem;
+        }
+    }
+
+    .btn-login {
+        background-color: $plerd-blue;
+        color: #fff !important;
+        border-radius: 8px;
+        padding: 0.5rem 1.25rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+
+        &:hover {
+            background-color: darken($plerd-blue, 5);
+        }
+    }
+}
+
+// Public Tournament Dashboard
+.plerd-public-hero {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    h1 {
+        font-weight: 800;
+        font-size: 2.25rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.plerd-list-group {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-shadow: $plerd-card-shadow;
+
+    .list-group-item {
+        border-left: none;
+        border-right: none;
+        padding: 1.25rem 1.5rem;
+        font-weight: 500;
+        color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: background 0.2s;
+
+        &:first-child {
+            border-top: none;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            background-color: #fcfcfc;
+            color: $plerd-blue;
+        }
+
+        .item-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            svg {
+                width: 20px;
+                color: #adb5bd;
+            }
+        }
+
+        .chevron {
+            color: #dee2e6;
+            width: 18px;
+        }
+    }
+}
+
+.plerd-staff-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: $plerd-card-shadow;
+    margin-top: 2rem;
+
+    .card-header {
+        background-color: #fcfcfc;
+        border-bottom: 1px solid #eee;
+        padding: 1rem 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.05em;
+        color: #6c757d;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+        line-height: 1.8;
+
+        strong {
+            color: #333;
+        }
+    }
+}
+
+// Global UI improvements
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+.container-fluid {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}

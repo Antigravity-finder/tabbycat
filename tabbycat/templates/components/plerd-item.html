@@ -1,0 +1,8 @@
+<a href="{{ url }}" {% if blank %}target="_blank" {% endif %} {% if id %}id="{{ id }}" {% endif %}
+    class="list-group-item list-group-item-action">
+    <div class="item-content">
+        <i data-feather="{% if icon %}{{ icon }}{% else %}chevron-right{% endif %}"></i>
+        <span>{{ text|safe }}</span>
+    </div>
+    <i data-feather="chevron-right" class="chevron"></i>
+</a>
