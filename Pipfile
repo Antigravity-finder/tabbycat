@@ -33,7 +33,6 @@ django-jet-reboot = "*"
 Django = "*"
 dj-database-url = "*"
 honcho = "*"
-gunicorn = "*"
 sentry-sdk = "*"
 whitenoise = "*"
 drf-spectacular = "*"
@@ -41,6 +40,7 @@ daphne = "*"
 drf-link-header-pagination = "*"
 networkx = "*" # Avoid its dependencies (SciPy)
 django-push-notifications = {extras = ["wp"], version = "*"}
+gunicorn = "*"
 
 [dev-packages]
 pre-commit = "*"
