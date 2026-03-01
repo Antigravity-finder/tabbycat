@@ -656,12 +656,12 @@
         },
         "django-polymorphic": {
             "hashes": [
-                "sha256:04b2f496f43121d83db78574b64e1326f1fa2e8a4cd1b667dfbeb87bddd945c6",
-                "sha256:14d2fabe2df7123e0d153286d0d3e63967e4962a29d400f282bdc455e28c9c5a"
+                "sha256:3024ba43fe9d8258d094de621603d8ea1331a87e35eb7f09cca5c320ea896add",
+                "sha256:8f9644bb86de722e6a7af0bf2b483bea7b95e0ac917aca264c3a48782c2c93a6"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.10' and python_version < '4.0'",
-            "version": "==4.11.0"
+            "version": "==4.11.1"
         },
         "django-push-notifications": {
             "extras": [
